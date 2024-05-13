@@ -1,9 +1,11 @@
 import Image from "next/image";
 
-export default function ArtPiecePreview({ image, title, artist }) {
+export default function ArtPiecePreview({ image, title, artist, dimensions }) {
+  const height = dimensions.height / 5;
+  const width = dimensions.width / 5;
   return (
     <>
-      <Image src={image} height={400} width={400} alt={title} />
+      <Image src={image} height={height} width={width} alt={title} />
       <h2>{title}</h2>
 
       <h4>by {artist}</h4>

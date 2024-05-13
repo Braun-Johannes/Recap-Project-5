@@ -23,14 +23,19 @@ export default function HomePage() {
   }
 
   if (!pieces) {
-    return;
+    return <>Is loading...</>;
   }
 
   const randomPiece = getRandomPiece(pieces);
+  console.log(randomPiece);
 
   return (
     <>
-      <Spotlight image={randomPiece.imageSource} artist={randomPiece.artist} />
+      <Spotlight
+        image={randomPiece.imageSource}
+        artist={randomPiece.artist}
+        dimensions={randomPiece.dimensions}
+      />
       <ArtPieces pieces={pieces} />
     </>
   );
