@@ -2,8 +2,13 @@ import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
 
 export default function ArtPieces({ pieces }) {
   console.log(pieces); //ACHTUNG
+
+  if (!pieces) {
+    return <>No data available...</>;
+  }
+
   return (
-    <>
+    <div>
       {pieces.map((piece) => {
         return (
           <ul key={piece.slug}>
@@ -15,6 +20,6 @@ export default function ArtPieces({ pieces }) {
           </ul>
         );
       })}
-    </>
+    </div>
   );
 }
