@@ -1,8 +1,6 @@
 import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
 
 export default function ArtPieces({ pieces }) {
-  console.log(pieces); //ACHTUNG
-
   if (!pieces) {
     return <>No data available...</>;
   }
