@@ -32,11 +32,3 @@ export default function ArtPiecePreview({
     </>
   );
 }
-
-{
-  /* <Image src={image} height={height} width={width} alt={title}></Image>
-      <h2>{title}</h2>
-      <h4>by {artist}</h4>
-      <Link href={`/art-pieces/${pieces.slug}`}>Details</Link>
-      <hr /> */
-}
