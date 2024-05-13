@@ -1,5 +1,5 @@
-import ArtPieces from "@/components/ArtPieces/ArtPieces";
 import useSWR from "swr";
+import ArtPieces from "@/components/ArtPieces/ArtPieces";
 
 export default function HomePage() {
   const url = "https://example-apis.vercel.app/api/art";
