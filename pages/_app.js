@@ -28,8 +28,8 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <SWRConfig value={{ fetcher }}>
-        <Component {...pageProps} pieces={pieces} />
         <Layout />
+        <Component {...pageProps} pieces={pieces} />
       </SWRConfig>
     </>
   );
