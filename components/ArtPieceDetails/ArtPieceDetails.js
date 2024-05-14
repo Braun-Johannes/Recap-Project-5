@@ -20,6 +20,7 @@ export default function ArtPieceDetails({
       <p>Created in: {year}</p>
       <p>Genre: {genre}</p>
       <Link href="../art-pieces">Back</Link>
+      <hr />
     </>
   );
 }
