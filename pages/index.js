@@ -3,7 +3,7 @@ import FavoriteButton from "@/components/FavoriteButton/FavoriteButton";
 
 export default function SpotLightPage({
   pieces,
-  isFavorite,
+  artPiecesInfo,
   onToggleFavorite,
 }) {
   function getRandomPiece(array) {
@@ -20,8 +20,14 @@ export default function SpotLightPage({
         dimensions={randomPiece.dimensions}
       />
       <FavoriteButton
-        isFavorite={isFavorite}
-        onToggleFavorite={onToggleFavorite}
+        isFavorite={
+          artPiecesInfo?.find((artPiece) => {
+            return artPiece.slug === randomPiece.slug;
+          })?.isFavorite
+        }
+        onToggleFavorite={() => {
+          onToggleFavorite(randomPiece.slug);
+        }}
       />
     </>
   );
