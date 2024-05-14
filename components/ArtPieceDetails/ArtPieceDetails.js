@@ -18,6 +18,7 @@ export default function ArtPieceDetails({
 
   return (
     <>
+      <Link href="../art-pieces">Back</Link>
       <h1>{title}</h1>
       <h3>By: {artist}</h3>
       <Image src={image} width={width} height={height} alt={title}></Image>
@@ -33,7 +34,6 @@ export default function ArtPieceDetails({
       />
       <p>Created in: {year}</p>
       <p>Genre: {genre}</p>
-      <Link href="../art-pieces">Back</Link>
     </>
   );
 }
