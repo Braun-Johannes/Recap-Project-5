@@ -18,7 +18,6 @@ export default function App({ Component, pageProps }) {
     "artPiecesInfo",
     []
   );
-  // pretty sure default is wrong (toggle no longer working)
 
   function handleIsFavorite(slug) {
     const newPiece = artPiecesInfo.find((piece) => {
