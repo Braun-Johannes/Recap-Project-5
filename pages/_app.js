@@ -3,6 +3,7 @@ import { SWRConfig } from "swr";
 import useSWR from "swr";
 import Layout from "@/components/Layout/Layout";
 import { useState } from "react";
+import useLocalStorage from "use-local-storage";
 
 async function fetcher(...args) {
   const response = await fetch(...args);
@@ -13,8 +14,11 @@ export default function App({ Component, pageProps }) {
   const url = "https://example-apis.vercel.app/api/art";
   const { data: pieces, error, isLoading } = useSWR(url, fetcher);
 
-  const [artPiecesInfo, setArtPiecesInfo] = useState([]);
-  console.log(artPiecesInfo);
+  const [artPiecesInfo, setArtPiecesInfo] = useLocalStorage(
+    "artPiecesInfo",
+    []
+  );
+
   function handleIsFavorite(slug) {
     const newPiece = artPiecesInfo.find((piece) => {
       return piece.slug === slug;
