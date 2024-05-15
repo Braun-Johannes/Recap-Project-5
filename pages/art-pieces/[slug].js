@@ -26,6 +26,7 @@ export default function PieceDetail({
     };
     setComments([...comments, newComment]);
   }
+  // console.log(piece);
 
   return (
     <>
@@ -37,6 +38,7 @@ export default function PieceDetail({
         genre={piece.genre}
         dimensions={piece.dimensions}
         slug={piece.slug}
+        colors={piece.colors}
         artPiecesInfo={artPiecesInfo}
         onToggleFavorite={onToggleFavorite}
       />
