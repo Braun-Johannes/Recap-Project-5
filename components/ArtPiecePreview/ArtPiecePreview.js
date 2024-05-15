@@ -17,7 +17,7 @@ export default function ArtPiecePreview({
               src={piece.imageSource}
               height={piece.dimensions.height / 5}
               width={piece.dimensions.width / 5}
-              alt={piece.title}
+              alt=""
             ></Image>
             <h2>{piece.name}</h2>
             <h4>by {piece.artist}</h4>

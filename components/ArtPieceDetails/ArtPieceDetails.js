@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import FavoriteButton from "../FavoriteButton/FavoriteButton";
+import { Fragment } from "react";
+import styled from "styled-components";
 
 export default function ArtPieceDetails({
   image,
@@ -10,11 +12,19 @@ export default function ArtPieceDetails({
   genre,
   dimensions,
   slug,
+  colors,
   artPiecesInfo,
   onToggleFavorite,
 }) {
   const height = dimensions.height / 5;
   const width = dimensions.width / 5;
+
+  const ColoredDiv = styled.div`
+    width: 30x;
+    height: 30px;
+    margin-right: 10px;
+    background-color: ${(props) => props.color};
+  `;
 
   return (
     <>
@@ -34,6 +44,11 @@ export default function ArtPieceDetails({
       />
       <p>Created in: {year}</p>
       <p>Genre: {genre}</p>
+      <div>
+        {colors.map((color) => (
+          <ColoredDiv key={color} color={color} />
+        ))}
+      </div>
     </>
   );
 }
