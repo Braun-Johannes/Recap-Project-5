@@ -18,6 +18,7 @@ export default function CommentForm({ onSubmitComment }) {
       <fieldset>
         <legend>Create your own Comment</legend>
         <label htmlFor="comment">Comment : </label>
+        <br></br>
         <textarea
           name="comment"
           id="comment"
@@ -27,6 +28,7 @@ export default function CommentForm({ onSubmitComment }) {
           value={commentText}
           onChange={handleInputChange}
         />
+        <br></br>
         <button type="submit">Send</button>
       </fieldset>
     </form>
